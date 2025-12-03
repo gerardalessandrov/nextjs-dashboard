@@ -30,7 +30,13 @@ export type Revenue = {
   month: string;
   revenue: number;
 };
-
+export type Invoice = {
+  id: string; // Will be created on the database
+  customer_id: string;
+  amount: number; // Stored in cents
+  status: 'pending' | 'paid';
+  date: string;
+};
 export type LatestInvoice = {
   id: string;
   name: string;
